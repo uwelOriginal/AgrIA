@@ -2,7 +2,7 @@
 
 Made with Streamlit. Domain Link below
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://https://agr-ia.streamlit.app/)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://agr-ia.streamlit.app/)
 
 ### How to run it on your own machine
 

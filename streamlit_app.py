@@ -1,6 +1,8 @@
 import streamlit as st
 
-st.title("🎈 My new app")
+st.title("La agria")
 st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
+    "Tira una foto"
 )
+
+st.camera_input(label="Camara", key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False, label_visibility="visible")

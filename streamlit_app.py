@@ -39,10 +39,12 @@ right: 2rem;
 
 [data-testid="stSidebarCollapsedControl"] {{
 background-color: white;
+color: black;
 }}
 
 [data-testid="stSidebarCollapseButton"] {{
 background-color: white;
+color: black;
 }}
 
 [data-testid="stHeadingWithActionElements"] > h1:first-child {{
@@ -50,12 +52,14 @@ background-color: white;
 padding: 20px;
 border-radius: 15px 50px 30px;
 text-align: center;
+color: black;
 }}
 
 [data-testid="stMarkdownContainer"] > p:first-child {{
 background-color: white;
 border-radius: 30px 50px 15px;
 padding: 0px 10px 0px 10px;
+color: black;
 }}
 </style>
 """

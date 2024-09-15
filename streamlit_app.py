@@ -1,6 +1,8 @@
 import base64
 import streamlit as st
 from streamlit_option_menu import option_menu
+import streamlit_shadcn_ui as ui
+import Preprocesamiento.agria_model as model
 
 def get_img_as_base64(file):
     with open(file, "rb") as f:
@@ -17,7 +19,7 @@ page_bg_img = f"""
 <style>
 [data-testid="stAppViewContainer"] > .main {{
 background-image: url("data:image/png;base64,{main_bg}");
-background-size: 135%;
+background-size: 150%;
 background-repeat: no-repeat;
 background-attachment: local;
 }}
@@ -65,12 +67,13 @@ background-color: Canvas;
 color: CanvasText;
 color-scheme: light dark;
 }}
+
 </style>
 """
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
 with st.sidebar:
-    selected = option_menu("La Agr.ia", ["Menú", 'Configuración'], 
+    selected = option_menu("La Agr-ia", ["Menú", 'Configuración'], 
         icons=['house', 'gear'], menu_icon="cast", default_index=1)
     
     st.write("Música")
@@ -82,7 +85,12 @@ if selected == "Menú":
     cam_toggle = st.toggle(label="Cámara",value=True)
 
     if cam_toggle:
-        st.camera_input(label="Tira una foto", key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False, label_visibility="visible")
+        picture = st.camera_input(label="Tira una foto", key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False, label_visibility="visible")
+        
+        if picture:
+            result = model.run(picture)
+            st.balloons()
+            st.title(result)
 
 elif selected == "Configuración":
     st.title("Configuración")

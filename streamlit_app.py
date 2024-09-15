@@ -1,7 +1,6 @@
 import base64
 import streamlit as st
 from streamlit_option_menu import option_menu
-import streamlit_shadcn_ui as ui
 import Preprocesamiento.agria_model as model
 
 def get_img_as_base64(file):

@@ -17,7 +17,7 @@ page_bg_img = f"""
 <style>
 [data-testid="stAppViewContainer"] > .main {{
 background-image: url("data:image/png;base64,{main_bg}");
-background-size: 130%;
+background-size: 135%;
 background-repeat: no-repeat;
 background-attachment: local;
 }}
@@ -38,28 +38,32 @@ right: 2rem;
 }}
 
 [data-testid="stSidebarCollapsedControl"] {{
-background-color: white;
-color: black;
+background-color: Canvas;
+color: CanvasText;
+color-scheme: light dark;
 }}
 
 [data-testid="stSidebarCollapseButton"] {{
-background-color: white;
-color: black;
+background-color: Canvas;
+color: CanvasText;
+color-scheme: light dark;
 }}
 
 [data-testid="stHeadingWithActionElements"] > h1:first-child {{
-background-color: white;
 padding: 20px;
 border-radius: 15px 50px 30px;
 text-align: center;
-color: black;
+background-color: Canvas;
+color: CanvasText;
+color-scheme: light dark;
 }}
 
 [data-testid="stMarkdownContainer"] > p:first-child {{
-background-color: white;
 border-radius: 30px 50px 15px;
 padding: 0px 10px 0px 10px;
-color: black;
+background-color: Canvas;
+color: CanvasText;
+color-scheme: light dark;
 }}
 </style>
 """
@@ -71,8 +75,6 @@ with st.sidebar:
     
     st.write("Música")
     st.audio(data="public/playlist/solstice.mp3",loop=True)
-
-camera_active = True
 
 if selected == "Menú":
     st.title("Menú")

@@ -32,7 +32,7 @@ def run(img_path):
 
     # Cargar el modelo IR (XML y BIN ya preconvertidos)
     core = ov.Core()
-    ov_model = core.read_model("Preprocesamiento/simple_cnn.xml")
+    ov_model = core.read_model("Preprocesamiento/simple_cnnn.xml")
 
     # Compilar el modelo para el dispositivo deseado (CPU)
     compiled_model = core.compile_model(ov_model, 'CPU')

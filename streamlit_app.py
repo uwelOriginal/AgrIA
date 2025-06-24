@@ -16,7 +16,7 @@ navbar_bg = get_img_as_base64("public/navbar_bg.webp")
 
 page_bg_img = f"""
 <style>
-[data-testid="stAppViewContainer"] > .main {{
+[data-testid="stAppViewContainer"] {{
 background-image: url("data:image/png;base64,{main_bg}");
 background-size: 150%;
 background-repeat: no-repeat;
